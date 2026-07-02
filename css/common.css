@@ -594,11 +594,29 @@ img { max-width: 100%; height: auto; display: block; }
   .hero-stats { gap: 10px; }
   .hero-stat { min-width: 90px; padding: 8px 14px; }
   .header-nav { display: none; }
+  .trust-bar { gap: 10px; padding: 10px 16px; font-size: .75rem; }
+  .sec-title { font-size: 1.15rem; margin: 32px 0 14px; }
+  .rank-card { padding: 20px 16px; }
+  .rank-link { display: block; text-align: center; padding: 10px 16px; }
+  .cta-btn { display: block; text-align: center; padding: 15px 20px; }
+  .game-card-head { flex-wrap: wrap; gap: 6px; }
 }
 
 @media (max-width: 480px) {
   .top-hero { padding: 40px 16px 36px; }
+  .top-hero h1 { font-size: 1.45rem; }
+  .top-hero-badges { gap: 6px; }
+  .top-hero-badges span { font-size: .75rem; padding: 3px 10px; }
   .page-hero { padding: 32px 16px 28px; }
-  .card { padding: 18px; }
-  .cta-btn { padding: 13px 28px; font-size: 1rem; }
+  .site-hero { padding: 32px 16px 28px; }
+  .site-hero h1 { font-size: 1.4rem; }
+  .card { padding: 16px; }
+  .card h2 { font-size: 1.05rem; }
+  .cta-btn { font-size: .95rem; }
+  .hero-stat .val { font-size: 1.2rem; }
+  .ranking-grid { gap: 14px; }
+  .rank-card-emoji { font-size: 2rem; }
+  .breadcrumb { font-size: .72rem; margin: 12px auto 0; }
+  .step-list li { gap: 10px; padding: 12px; }
+  .merit-list li, .demerit-list li { font-size: .88rem; }
 }
