@@ -3,92 +3,92 @@
 
   <!-- トップページ -->
   <url>
-    <loc>https://poikatsu.siriusfactor.com/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- 始め方ガイド -->
   <url>
-    <loc>https://poikatsu.siriusfactor.com/guide</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/guide</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- サイト紹介ページ -->
   <url>
-    <loc>https://poikatsu.siriusfactor.com/sites/moppy</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/sites/moppy</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://poikatsu.siriusfactor.com/sites/hapitas</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/sites/hapitas</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://poikatsu.siriusfactor.com/sites/chobirich</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/sites/chobirich</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://poikatsu.siriusfactor.com/sites/warau</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/sites/warau</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poikatsu.siriusfactor.com/sites/kausche</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/sites/kausche</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poikatsu.siriusfactor.com/sites/tiktoklite</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/sites/tiktoklite</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- 攻略ページ -->
   <url>
-    <loc>https://poikatsu.siriusfactor.com/games/moppy-games</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/games/moppy-games</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poikatsu.siriusfactor.com/games/hapitas-games</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/games/hapitas-games</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poikatsu.siriusfactor.com/games/chobirich-games</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/games/chobirich-games</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poikatsu.siriusfactor.com/games/warau-games</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/games/warau-games</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poikatsu.siriusfactor.com/games/kausche-games</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/games/kausche-games</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poikatsu.siriusfactor.com/games/tiktoklite-games</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://sirius-sports.github.io/poikatsu-site/games/tiktoklite-games</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
