@@ -1,0 +1,773 @@
+@import url("../_template/common.css");
+
+/*
+ * Poikatsu editorial theme
+ * Lifestyle magazine warmth + financial media credibility
+ */
+
+:root {
+  --ink: #24312b;
+  --ink2: #536159;
+  --ink3: #7b857f;
+  --paper: #fffefb;
+  --bg: #f3f0e9;
+  --white: #fffefb;
+  --gold: #aa8952;
+  --gold2: #cfb477;
+  --violet: #234f41;
+  --violet2: #376b59;
+  --green: #386c57;
+  --red: #9b4d42;
+  --border: #dcd7cc;
+  --shadow: 0 8px 28px rgba(42, 55, 48, .065);
+  --radius: 4px;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 4%, rgba(207, 180, 119, .08), transparent 24rem),
+    var(--bg);
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-feature-settings: "palt";
+  letter-spacing: .015em;
+}
+
+a {
+  color: #285c4b;
+  text-decoration-color: rgba(40, 92, 75, .45);
+}
+
+/* Header */
+.site-header {
+  background: rgba(255, 254, 251, .96);
+  border-bottom: 1px solid rgba(170, 137, 82, .35);
+  box-shadow: none;
+  backdrop-filter: blur(12px);
+}
+
+.site-header .inner {
+  height: 66px;
+}
+
+.site-logo {
+  color: #1d493b;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.12rem;
+  letter-spacing: .035em;
+}
+
+.site-logo span {
+  color: #9c7b45;
+}
+
+.header-nav {
+  gap: 2px;
+}
+
+.header-nav a {
+  color: #48564f;
+  font-size: .78rem;
+  letter-spacing: .045em;
+  padding: 7px 10px;
+}
+
+.header-nav a:hover {
+  color: #1d493b;
+  background: #ede9df;
+}
+
+.header-nav a[aria-current="page"] {
+  color: #1d493b !important;
+  background: #ede9df;
+}
+
+/* Hero */
+.top-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 78px 20px 70px;
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.035), transparent 45%),
+    linear-gradient(135deg, #193c32 0%, #265244 64%, #6f684e 140%);
+}
+
+.top-hero::after,
+.site-hero::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  pointer-events: none;
+}
+
+.top-hero h1,
+.page-hero h1,
+.site-hero h1 {
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  letter-spacing: .055em;
+}
+
+.top-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.48;
+}
+
+.top-hero h1 em {
+  color: #ead5a2;
+}
+
+.top-hero .lead {
+  max-width: 620px;
+  font-size: 1rem;
+  line-height: 1.95;
+}
+
+.top-hero-badges span {
+  background: transparent;
+  border: 1px solid rgba(238, 220, 179, .5);
+  border-radius: 2px;
+  color: #f4ead3;
+  padding: 5px 14px;
+  font-size: .75rem;
+  letter-spacing: .05em;
+}
+
+.page-hero {
+  padding: 58px 20px 50px;
+  background: #fffefb;
+  border-bottom-color: var(--border);
+}
+
+.site-hero {
+  position: relative;
+  padding: 58px 20px 50px;
+}
+
+.site-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/*
+ * Article series treatment
+ * Service and strategy pages should feel like chapters of one publication.
+ * Individual brand colors remain in small labels and data, not large surfaces.
+ */
+body > .breadcrumb + div:has(> .site-hero) {
+  position: relative;
+  background:
+    radial-gradient(circle at 82% 16%, rgba(207,180,119,.17), transparent 18rem),
+    linear-gradient(135deg, #193c32 0%, #285344 72%, #5d5a45 130%) !important;
+}
+
+body > .breadcrumb + div:has(> .site-hero)::before {
+  content: "FEATURE";
+  position: absolute;
+  right: max(24px, calc((100vw - 1120px) / 2));
+  top: 24px;
+  color: rgba(255,255,255,.07);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.8rem, 7vw, 6.5rem);
+  letter-spacing: .12em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.site-hero .hero-badge {
+  background: transparent;
+  border: 1px solid rgba(232,213,168,.55);
+  border-radius: 2px;
+  color: #f0dfb9;
+  letter-spacing: .09em;
+  padding: 5px 13px;
+}
+
+.site-hero .lead {
+  line-height: 1.9;
+}
+
+.hero-stat {
+  background: rgba(255,255,255,.075);
+  border-color: rgba(232,213,168,.32);
+  border-radius: 3px;
+}
+
+.hero-stat .val {
+  color: #f4e5c5;
+  font-family: Georgia, "Yu Mincho", serif;
+  letter-spacing: .025em;
+}
+
+/* Layout and editorial cards */
+.layout {
+  max-width: 1080px;
+  padding-top: 46px;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 36px;
+}
+
+.card {
+  background: rgba(255, 254, 251, .97);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 30px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow);
+}
+
+.card h2,
+.sec-title {
+  color: #20382f;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-weight: 600;
+  letter-spacing: .045em;
+}
+
+.card h2 {
+  border-bottom: 1px solid #cdbf9f;
+  padding-bottom: 13px;
+  gap: 0;
+}
+
+.card h3 {
+  color: #29483c;
+}
+
+.sec-title {
+  margin-top: 58px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #ae9564;
+  font-size: 1.38rem;
+}
+
+.ranking-grid {
+  gap: 24px;
+}
+
+.rank-card {
+  border: 1px solid var(--border);
+  border-top: 3px solid #ad9565;
+  border-radius: 3px;
+  padding: 29px 25px 25px;
+  box-shadow: 0 6px 22px rgba(42,55,48,.055);
+}
+
+/* Service identity is a restrained editorial accent, not a full color block. */
+.ranking-grid .rank-card:nth-child(1) { border-top-color: #47705f; }
+.ranking-grid .rank-card:nth-child(2) { border-top-color: #9b655b; }
+.ranking-grid .rank-card:nth-child(3) { border-top-color: #b08a45; }
+.ranking-grid .rank-card:nth-child(4) { border-top-color: #55566a; }
+.ranking-grid .rank-card:nth-child(5) { border-top-color: #8b526d; }
+.ranking-grid .rank-card:nth-child(6) { border-top-color: #638067; }
+
+.rank-card > div[style*="font-size:2rem"] {
+  color: #24312b !important;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.55rem !important;
+  font-weight: 600 !important;
+  letter-spacing: .035em !important;
+}
+
+.rank-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(42,55,48,.1);
+}
+
+.rank-badge,
+.rank-badge.s2,
+.rank-badge.s3 {
+  background: #315849;
+  border-radius: 0 0 3px 0;
+  font-family: Georgia, serif;
+  letter-spacing: .06em;
+}
+
+.rank-card-emoji {
+  font-size: 1.85rem;
+  filter: saturate(.72);
+}
+
+.rank-card-emoji:empty {
+  display: none;
+}
+
+/* Buttons */
+.cta-btn {
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 2px;
+  background: linear-gradient(135deg, #234f41, #376b59);
+  box-shadow: 0 6px 18px rgba(35,79,65,.18);
+  font-size: .94rem;
+  letter-spacing: .07em;
+  background: linear-gradient(135deg, #234f41, #376b59) !important;
+}
+
+.cta-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 24px rgba(35,79,65,.25);
+}
+
+.rank-link {
+  border: 1px solid #315849;
+  border-radius: 2px;
+  color: #285343;
+  padding: 8px 17px;
+  letter-spacing: .04em;
+}
+
+.rank-link:hover {
+  background: #315849;
+}
+
+/* Primary action: an external registration/referral link. */
+.cta-btn[target="_blank"] {
+  color: #fff !important;
+  background: linear-gradient(135deg, #234f41, #376b59) !important;
+  border-color: transparent !important;
+}
+
+/* Secondary action: navigation within this publication. */
+.cta-btn:not([target="_blank"]) {
+  color: #285343 !important;
+  background: #fffefb !important;
+  border: 1px solid #315849 !important;
+  box-shadow: none;
+}
+
+.cta-btn:not([target="_blank"]):hover {
+  color: #fff !important;
+  background: #315849 !important;
+}
+
+/* Top-page service cards: one clear primary and one quiet secondary action. */
+.rank-card .rank-link {
+  color: #fff !important;
+  background: #315849 !important;
+  border-color: #315849 !important;
+}
+
+.rank-card .rank-link + .rank-link {
+  color: #315849 !important;
+  background: transparent !important;
+  border-color: #9eaa9f !important;
+}
+
+.rank-card .rank-link + .rank-link:hover {
+  background: #edf0eb !important;
+}
+
+/* Tables, notices and supporting UI */
+.spec-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.spec-table th,
+.spec-table td {
+  border-color: #ded8cc;
+}
+
+.spec-table th {
+  background: #eeebe3;
+  color: #48564f;
+}
+
+.alert,
+.point-box,
+.step-list li,
+.game-card {
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.game-card {
+  border-color: #d9d3c7;
+  overflow: hidden;
+}
+
+.game-card-head {
+  position: relative;
+  background: linear-gradient(135deg, #284e41, #3e6758) !important;
+  border-left: 4px solid #b59a65;
+  padding: 16px 20px;
+}
+
+.game-card-head h3 {
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-weight: 600;
+  letter-spacing: .035em;
+}
+
+.diff-badge {
+  background: rgba(255,255,255,.09);
+  border: 1px solid rgba(232,213,168,.35);
+  border-radius: 2px;
+}
+
+.game-card-body {
+  background: #fffefb;
+  padding: 22px 23px;
+}
+
+.main-col > .card:first-child {
+  border-top: 3px solid #aa8952;
+}
+
+/* Comfortable magazine-like measure for prose while data components stay wide. */
+.main-col .card > p,
+.main-col .card > ul:not(.step-list):not(.merit-list):not(.demerit-list),
+.main-col .game-card-body > p,
+.main-col .point-box > p {
+  max-width: 66ch;
+}
+
+.main-col .card > p[style*="text-align:center"],
+.main-col .card > p[style*="text-align: center"] {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Recommendation tiles on the top page use one neutral visual language. */
+.main-col a[style*="text-decoration:none"] > div[style*="border:2px"] {
+  border-color: #d6d1c6 !important;
+  border-top: 2px solid #aa8952 !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+
+.main-col a[style*="text-decoration:none"] > div[style*="border:2px"] > div[style*="background:"] {
+  color: #fff !important;
+  background: #527062 !important;
+  border-radius: 2px !important;
+}
+
+.main-col > .card:last-child {
+  margin-bottom: 0;
+}
+
+/* Article byline and disclosure */
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin: 0 0 24px;
+  padding: 13px 0;
+  border-top: 1px solid #cdbf9f;
+  border-bottom: 1px solid #dcd7cc;
+  color: #657168;
+  font-size: .76rem;
+  letter-spacing: .035em;
+}
+
+.author-profile {
+  margin: 0 0 24px;
+  padding: 22px 24px;
+  background: rgba(255,254,251,.7);
+  border-top: 1px solid #cdbf9f;
+  border-bottom: 1px solid #dcd7cc;
+}
+
+.author-profile-label {
+  margin-bottom: 8px;
+  color: #8d7448;
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+}
+
+.author-profile-name {
+  color: #29483c;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.13rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+}
+
+.author-profile-history {
+  margin-top: 4px;
+  color: #617067;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.author-profile p {
+  max-width: 68ch;
+  margin: 11px 0 0;
+  color: #536159;
+  font-size: .84rem;
+  line-height: 1.9;
+}
+
+.author-profile strong {
+  color: #29483c;
+  font-weight: 700;
+}
+
+.article-meta strong {
+  color: #35483f;
+  font-weight: 600;
+}
+
+.article-toc {
+  margin-bottom: 28px;
+  padding: 22px 24px;
+  background: rgba(255,254,251,.72);
+  border-left: 2px solid #aa8952;
+}
+
+.article-toc-title {
+  margin-bottom: 11px;
+  color: #29483c;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+
+.article-toc ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px 26px;
+  margin: 0;
+  padding-left: 1.3em;
+  color: #9a7b48;
+}
+
+.article-toc a {
+  color: #43554c;
+  font-size: .82rem;
+  text-decoration: none;
+}
+
+.article-toc a:hover {
+  color: #1d493b;
+  text-decoration: underline;
+}
+
+.referral-disclosure {
+  max-width: 64ch;
+  margin: 15px auto 10px;
+  color: #68736d;
+  font-size: .75rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.alert-info,
+.point-box {
+  background: #eef2ee;
+  border-color: #628171;
+  color: #29473b;
+}
+
+.alert-warn {
+  background: #f6f1e5;
+  border-color: #b09056;
+  color: #604d2c;
+}
+
+.trust-bar {
+  background: #ebe7dd;
+  border-color: #d6cdb9;
+  color: #4c5c54;
+}
+
+.breadcrumb {
+  margin-top: 20px;
+}
+
+.sidebar .card {
+  padding: 22px;
+  box-shadow: none;
+}
+
+.sb-link-list a {
+  padding: 11px 4px;
+}
+
+.sb-dot {
+  display: none;
+}
+
+.merit-list li::before,
+.demerit-list li::before {
+  content: "";
+  width: 12px;
+  height: 1px;
+  margin-top: .78em;
+  background: currentColor;
+  opacity: .65;
+}
+
+.trust-bar span {
+  gap: 0;
+}
+
+.site-footer {
+  background: #1d3b32;
+  border-top: 4px solid #aa8952;
+  color: #e9e2d4;
+  margin-top: 70px;
+}
+
+.site-footer p,
+.site-footer a {
+  color: #e0d8ca;
+}
+
+.footer-note {
+  background: rgba(255,255,255,.06);
+  border-color: rgba(207,180,119,.35);
+  color: #e6d7b5;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+  }
+
+  .main-col div[style*="grid-template-columns:1fr 1fr"],
+  .main-col div[style*="grid-template-columns:repeat(3,1fr)"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .site-header .inner {
+    height: 60px;
+  }
+
+  .site-logo {
+    font-size: 1rem;
+  }
+
+  .nav-toggle:checked ~ .inner .header-nav {
+    top: 60px;
+    background: #fffefb;
+    border-bottom-color: #cdbf9f;
+  }
+
+  .site-header.nav-open .header-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 8px 0 12px;
+    background: #fffefb;
+    border-bottom: 1px solid #cdbf9f;
+    box-shadow: 0 8px 18px rgba(35,49,43,.12);
+    z-index: 99;
+  }
+
+  .site-header.nav-open .header-nav a {
+    padding: 12px 20px;
+    border-radius: 0;
+    font-size: .92rem;
+  }
+
+  .site-header.nav-open .hamburger-label span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .site-header.nav-open .hamburger-label span:nth-child(2) { opacity: 0; }
+  .site-header.nav-open .hamburger-label span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .top-hero {
+    padding: 54px 18px 48px;
+  }
+
+  .top-hero::after,
+  .site-hero::after {
+    inset: 9px;
+  }
+
+  body > .breadcrumb + div:has(> .site-hero)::before {
+    right: 16px;
+    top: 18px;
+    font-size: 3rem;
+  }
+
+  .site-hero {
+    padding: 44px 17px 40px;
+  }
+
+  .site-hero .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+
+  .site-hero .hero-stat {
+    min-width: 0;
+  }
+
+  .top-hero h1 {
+    font-size: 1.65rem;
+    line-height: 1.55;
+  }
+
+  .top-hero .lead {
+    font-size: .93rem;
+    line-height: 1.85;
+  }
+
+  .layout {
+    padding: 27px 16px 45px;
+  }
+
+  .card {
+    padding: 21px 18px;
+    margin-bottom: 20px;
+  }
+
+  .game-card-body {
+    padding: 18px;
+  }
+
+  .article-meta {
+    display: grid;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+
+  .author-profile {
+    padding: 19px 17px;
+    margin-bottom: 20px;
+  }
+
+  .article-toc {
+    padding: 19px 18px;
+  }
+
+  .article-toc ol {
+    grid-template-columns: 1fr;
+  }
+
+  .sec-title {
+    margin-top: 38px;
+    font-size: 1.18rem;
+  }
+
+  .rank-card {
+    padding: 24px 19px 20px;
+  }
+
+  .cta-btn,
+  .rank-link {
+    min-height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
