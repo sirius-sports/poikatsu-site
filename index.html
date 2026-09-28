@@ -21,7 +21,67 @@
 <meta name="twitter:title" content="スキマ時間にゲームでポイ活 | おすすめポイントサイト比較2026">
 <meta name="twitter:description" content="スキマ時間にゲームでポイントを稼ごう！モッピー・ハピタス・ちょびリッチ・TikTok Liteを徹底比較。初心者でも月1,000円以上稼げるポイ活サイトを紹介。">
 <meta name="twitter:image" content="https://sirius-sports.github.io/poikatsu-site/images/ogp.png">
-<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/common.css?v=20260928-top">
+<style>
+/* トップページだけは、共通CSSの読込み状態に左右されない専用ヒーローにする */
+body.friendly-page .top-hero {
+  isolation: isolate;
+  overflow: hidden;
+  padding: 68px 20px 64px;
+  background:
+    radial-gradient(circle at 8% 20%, rgba(255,255,255,.82) 0 13px, transparent 14px),
+    radial-gradient(circle at 12% 30%, rgba(255,255,255,.55) 0 34px, transparent 35px),
+    radial-gradient(circle at 89% 18%, rgba(255,255,255,.82) 0 18px, transparent 19px),
+    radial-gradient(circle at 83% 30%, rgba(255,255,255,.52) 0 45px, transparent 46px),
+    linear-gradient(145deg, #d6f5c9 0%, #e9fbd0 48%, #fff1bd 100%) !important;
+  color: #315d3a;
+  border: 0 !important;
+}
+body.friendly-page .top-hero::before,
+body.friendly-page .top-hero::after { content: none !important; display: none !important; }
+body.friendly-page .top-hero h1 {
+  position: relative;
+  z-index: 1;
+  color: #365b3b !important;
+  font-family: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", sans-serif !important;
+  font-size: clamp(2rem, 5vw, 3.35rem);
+  line-height: 1.45;
+  letter-spacing: .04em;
+  text-shadow: 0 2px 0 rgba(255,255,255,.85);
+}
+body.friendly-page .top-hero h1 em {
+  color: #ef8747 !important;
+  font-style: normal;
+  text-decoration: underline wavy #f5c35f 3px;
+  text-underline-offset: 8px;
+}
+body.friendly-page .top-hero .lead {
+  position: relative;
+  z-index: 1;
+  max-width: 690px;
+  color: #406246 !important;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 700;
+}
+body.friendly-page .top-hero-badges span {
+  background: rgba(255,255,255,.88) !important;
+  border: 2px solid #92ca71 !important;
+  border-radius: 999px !important;
+  color: #3d7c3e !important;
+  box-shadow: 0 4px 0 rgba(96,159,76,.18) !important;
+}
+body.friendly-page .top-hero .cta-btn {
+  position: relative;
+  z-index: 1;
+  background: #f28c50 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  color: #fff !important;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 800;
+  box-shadow: 0 5px 0 #cf6735 !important;
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
