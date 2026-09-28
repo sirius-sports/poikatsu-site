@@ -21,6 +21,93 @@
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" href="../favicon.png" type="image/png">
 <link rel="stylesheet" href="../css/common.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* TikTok Lite only: keeps the black, pink and cyan identity while softening the UI. */
+.tiktoklite-page { background: linear-gradient(180deg, #fffbd5 0, #fff5ae 58%, #fff9cf 100%); color: #29252a; font-family: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", "Yu Gothic", Meiryo, sans-serif; }
+.tiktoklite-page .breadcrumb { background: #fff; }
+.tiktoklite-hero {
+  background:
+    radial-gradient(circle at 12% 22%, rgba(255,255,255,.78) 0 14px, transparent 15px),
+    radial-gradient(circle at 19% 29%, rgba(255,255,255,.44) 0 36px, transparent 37px),
+    radial-gradient(circle at 84% 18%, rgba(255,255,255,.74) 0 18px, transparent 19px),
+    radial-gradient(circle at 91% 25%, rgba(255,255,255,.4) 0 44px, transparent 45px),
+    linear-gradient(145deg, #fff9ba 0%, #fff2a0 70%, #ffed95 100%) !important;
+}
+.tiktoklite-page > .breadcrumb + .tiktoklite-hero { background:
+  radial-gradient(circle at 12% 22%, rgba(255,255,255,.78) 0 14px, transparent 15px),
+  radial-gradient(circle at 19% 29%, rgba(255,255,255,.44) 0 36px, transparent 37px),
+  radial-gradient(circle at 84% 18%, rgba(255,255,255,.74) 0 18px, transparent 19px),
+  radial-gradient(circle at 91% 25%, rgba(255,255,255,.4) 0 44px, transparent 45px),
+  linear-gradient(145deg, #fff9ba 0%, #fff2a0 70%, #ffed95 100%) !important; }
+.tiktoklite-page > .breadcrumb + .tiktoklite-hero::before,
+.tiktoklite-page > .breadcrumb + .tiktoklite-hero::after { display: none; }
+.tiktoklite-page .site-hero::after { display: none; }
+.tiktoklite-page .site-hero { padding: 44px 20px 50px; text-align: center; }
+.tiktoklite-page .site-hero .hero-badge { border: 2px solid #f09c69; border-radius: 999px; background: rgba(255,255,255,.88); color: #c65044; font-family: inherit; font-weight: 800; letter-spacing: .06em; }
+.tiktoklite-page .site-hero h1 { margin: 17px auto 13px; color: #252126; font-family: inherit; font-size: clamp(1.95rem, 7vw, 2.75rem); font-weight: 800; letter-spacing: .02em; line-height: 1.5; }
+.tiktoklite-page .hero-mini {
+  position: absolute; z-index: 2; padding: 7px 11px; color: #c86455; background: rgba(255,255,255,.82);
+  border: 1px solid rgba(232,142,112,.55); border-radius: 999px; box-shadow: 0 3px 0 rgba(225,165,99,.16); font-size: .72rem; font-weight: 800; letter-spacing: .03em;
+}
+.tiktoklite-page .hero-mini::before { content: ""; display: inline-block; width: 6px; height: 6px; margin: 0 5px 1px 0; border-radius: 50%; background: #f0a150; }
+.tiktoklite-page .hero-mini-left { left: max(20px, calc((100% - 820px) / 2)); top: 118px; }
+.tiktoklite-page .hero-mini-right { right: max(20px, calc((100% - 820px) / 2)); top: 155px; }
+.tiktoklite-page .tiktok-title-main { display: inline-block; text-shadow: 0 3px 0 rgba(229,91,80,.2); }
+.tiktoklite-page .tiktok-title-sub { display: inline-block; margin-top: 5px; padding: 3px 13px 5px; color: #33272a; background: #fff; border-radius: 999px; box-shadow: 3px 3px 0 #e58b75; font-size: .58em !important; font-weight: 800 !important; letter-spacing: .01em; opacity: 1 !important; }
+.tiktoklite-page .site-hero .lead { max-width: 38rem; margin-inline: auto; color: #4f4440; font-weight: 700; line-height: 1.9; }
+.tiktoklite-page .site-hero > p[style*="font-size"] { display: inline-block; margin-top: 18px !important; padding: 5px 12px; color: #765f4d !important; background: rgba(255,255,255,.74); border: 1px solid #f1c86f; border-radius: 999px; font-weight: 700; opacity: 1 !important; }
+.tiktoklite-page .hero-stats { max-width: 620px; margin: 25px auto 0; gap: 11px; }
+.tiktoklite-page .hero-stat { background: rgba(255,255,255,.96); border: 3px solid #fff; border-radius: 20px; box-shadow: 0 6px 0 rgba(229,91,80,.28); }
+.tiktoklite-page .hero-stat .val { color: #dc6458; font-family: inherit; font-weight: 800; }
+.tiktoklite-page .hero-stat .lbl { color: #61544d; font-weight: 700; }
+.tiktoklite-page .layout { padding-top: 34px; }
+.tiktoklite-page .author-profile,
+.tiktoklite-page .article-toc,
+.tiktoklite-page .card { border: 2px solid #f0dfc9; border-radius: 22px; box-shadow: 0 8px 0 rgba(221,158,101,.12); }
+.tiktoklite-page .author-profile { background: #fff; border-color: #f3dbb5; }
+.tiktoklite-page .author-profile-label { color: #cf795f; }
+.tiktoklite-page .author-profile-name,
+.tiktoklite-page .author-profile strong { color: #29293d; font-family: inherit; }
+.tiktoklite-page .author-profile-history { color: #dc6458; }
+.tiktoklite-page .author-profile p { color: #5c5b70; }
+.tiktoklite-page .article-toc { background: #fffbed; border-left: 3px solid #f0b667; }
+.tiktoklite-page .article-toc-title { color: #3f3b60; font-family: inherit; font-weight: 800; }
+.tiktoklite-page .article-toc ol { color: #e48762; }
+.tiktoklite-page .article-toc a { color: #4b4960; font-weight: 700; }
+.tiktoklite-page .card { position: relative; overflow: hidden; background: rgba(255,255,255,.94); padding: 28px; }
+.tiktoklite-page .main-col > .card::after { content: ""; position: absolute; width: 58px; height: 58px; right: -20px; bottom: -20px; border: 13px solid rgba(249,207,99,.25); border-radius: 50%; pointer-events: none; }
+.tiktoklite-page .main-col > .card:nth-of-type(even)::after { border-color: rgba(238,151,119,.19); }
+.tiktoklite-page .card h2 { color: #323048; border-bottom: 2px dashed #d8d4ee; font-family: inherit; font-weight: 800; letter-spacing: .01em; }
+.tiktoklite-page .card h2::before { content: ""; display: inline-block; width: 11px; height: 11px; margin: 0 8px 1px 1px; border-radius: 50%; background: #e47762; box-shadow: 5px 0 0 #f2bd68; }
+.tiktoklite-page .card h3 { color: #534f78; font-family: inherit; font-weight: 800; }
+.tiktoklite-page .spec-table th { background: #f4f3ff; color: #4e4a70; }
+.tiktoklite-page .spec-table th,
+.tiktoklite-page .spec-table td { border-color: #e5e1f0; }
+.tiktoklite-page .step-list li,
+.tiktoklite-page .alert { border-radius: 16px; }
+.tiktoklite-page .cta-btn,
+.tiktoklite-page .cta-btn[target="_blank"] { border: 3px solid #fff !important; border-radius: 999px; background: linear-gradient(135deg, #e9685c, #dc574d) !important; box-shadow: 0 6px 0 #b94740, 0 10px 18px rgba(220,87,77,.16); color: #fff !important; font-family: inherit; font-weight: 800; letter-spacing: .02em; }
+.tiktoklite-page .cta-btn:not([target="_blank"]) { color: #9d5044 !important; background: #fff !important; border: 3px solid #f0a275 !important; box-shadow: 0 5px 0 #ffe2a7; }
+.tiktoklite-page .site-footer { position: relative; overflow: hidden; margin-top: 44px; padding: 42px 18px 34px; color: #554742; background: linear-gradient(180deg, #ffef9f, #fff8d2); border-top: 3px solid #f1c66e; }
+.tiktoklite-page .site-footer::before,
+.tiktoklite-page .site-footer::after { content: ""; position: absolute; width: 120px; height: 120px; border: 17px solid rgba(37,244,238,.13); border-radius: 50%; pointer-events: none; }
+.tiktoklite-page .site-footer::before { left: -50px; top: -72px; border-color: rgba(255,255,255,.48); }
+.tiktoklite-page .site-footer::after { right: -38px; bottom: -82px; border-color: rgba(232,120,98,.15); }
+.tiktoklite-page .site-footer p,
+.tiktoklite-page .site-footer .footer-note { position: relative; z-index: 1; }
+.tiktoklite-page .site-footer > p:first-child { color: #7d493f; font-family: inherit; font-weight: 800; }
+.tiktoklite-page .site-footer a { color: #c75a4e; text-underline-offset: 3px; }
+.tiktoklite-page .site-footer .footer-note { max-width: 680px; margin-inline: auto; padding: 11px 14px; color: #68564c; background: rgba(255,255,255,.72); border: 2px solid #f5d58d; border-radius: 16px; font-size: .76rem; line-height: 1.75; }
+.tiktoklite-page .site-footer .footer-note + .footer-note { margin-top: 8px !important; }
+@media (max-width: 720px) {
+  .tiktoklite-page .site-hero { padding: 34px 16px 42px; }
+  .tiktoklite-page .card { padding: 22px 16px; }
+  .tiktoklite-page .hero-mini { display: none; }
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,7 +138,7 @@
 </script>
 <script src="../js/common.js" defer></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3803LRL3SN"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-3803LRL3SN")</script></head>
-<body>
+<body class="tiktoklite-page">
 <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
 <header class="site-header">
@@ -77,10 +164,12 @@
   <a href="tiktoklite">TikTok Lite</a>
 </nav>
 
-<div style="background:linear-gradient(135deg,#010101,#1a1a2e);">
+<div class="tiktoklite-hero">
   <div class="site-hero">
     <div class="hero-badge"> ポイ活アプリ紹介</div>
-    <h1>TikTok Lite<br><span style="font-size:1.1rem;font-weight:400;opacity:.9;">動画を見るだけでコイン獲得</span></h1>
+    <div class="hero-mini hero-mini-left" aria-hidden="true">スキマ時間に</div>
+    <div class="hero-mini hero-mini-right" aria-hidden="true">コツコツ貯める</div>
+    <h1><span class="tiktok-title-main">TikTok Lite</span><br><span class="tiktok-title-sub">動画を見てコインを貯めよう</span></h1>
     <p class="lead">動画を見るだけでコインが貯まり、PayPay・Amazon等に交換可能。条件変動が多いため最新情報の確認が必要。</p>
     <div class="hero-stats">
       <div class="hero-stat"><div class="val">1pt=1円</div><div class="lbl">交換レート</div></div>
